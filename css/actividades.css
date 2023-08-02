@@ -1,0 +1,120 @@
+/* Fuentes */
+@import url(https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Sansita&family=Yatra+One&display=swap);
+
+/* Para centrar un div dentro de otro, usaremos en el contenedor 
+padre la propiedad display:flex y en el contenedor hijo la 
+propiedad margin: auto para que se ajuste el div hijo al tamaño
+del contenedor padre automáticamente, ver en curso css mas formas... */
+
+.contenedor-main{
+    background-color: var(--rojo-claro);
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+}
+@media(min-width:675px) {
+    .contenedor-main{
+        height: 110vh;
+    }
+}
+@media(min-width:1100px) {
+    .contenedor-main{
+        height: 150vh;
+    }
+}
+.contenido-main{
+    background-color: var(--oscuro);
+    width: 95vw;
+    height: 95vh;
+    border-radius: 10px;
+    border: 2px solid var(--rojo);
+   
+    
+    margin: auto;
+}
+@media(min-width:675px) {
+    .contenido-main{
+        height: 95%;
+    }
+}
+.texto h1,h2{
+    font-size: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    color: var(--rojo);
+    text-shadow: 2px 2px 2px black;
+}
+.texto{
+    text-align: center;
+    color: wheat;
+    font-size: .8em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.texto h1{
+    color: white;
+    text-shadow: 2px 2px 2px var(--rojo); 
+}
+@media(min-width:675px) {
+    .texto h1{
+        font-size: 2em;
+    }
+}
+@media(min-width:1100px) {
+    .texto1 h1{
+        font-size: 3em;
+    }
+}
+.imagenes{/*centramos el padre que contiene las imágenes*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    text-align: center;
+  
+   
+    
+    /* overflow: hidden;  para evitar el desbordamiento oculta e contenido*/
+
+    
+}
+@media(min-width:675px) {
+    .imagenes{
+       margin-top: 5em; 
+    }
+
+}
+.imagenes .caja img{/*tamaño de las imágenes, pongo un segundo selector para dar el mismo tamaño a todas al mismo tiempo*/
+    height: 70%;
+    width: 70%;/*MUY IMPORTANTE USAR % PARA EL TAMAÑO DE LAS IMAGENES Y QUE NO DESBORDE EL CONTENIDO, CON em aunque sea medida relativa desborda*/
+    border-radius: 12px;
+    margin: .5em;
+
+
+    
+}
+
+@media(min-width:675px) {
+    .imagenes .caja img{/* USAR %  */
+        height: 75%;
+        width: 65%; 
+        margin: 1em;
+    }
+}
+@media(min-width:1100px) {
+    .imagenes .caja img{/* USAR %  */
+        height: 80%;
+        width: 70%; 
+        margin: .7em;
+        margin-bottom: 2em;
+    }
+
+}
+
+
+/* SOLUCIONAR PROBLEMA EN TAMAÑO PC SE DESBORDA EL CONTENIDO */
+
+
+
+

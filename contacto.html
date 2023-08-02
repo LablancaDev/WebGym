@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/contacto.css">
+</head>
+<body>
+    <!-- SECCION NAV -->
+    <nav class="contenido-nav">
+        <div class="logo">
+            <img src="./assets/logo/spartan-logo-png.png" alt="">
+        </div>
+        <div class="menu">
+            <a href="./index.html">Inicio</a>
+            <a href="./nosotros.html">Sobre Nosotros</a>
+            <a href="./actividades.html">Actividades</a>
+            <a href="./contacto.html">Contacto</a>
+        </div>
+        <div class="nav_toggle" id="_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <main class="contenedor-main">
+        <div class="contenido-main">
+            <form class="formulario">
+
+                <label for="first-name">Nombre: </label><!--etiqueta-->
+                <input class="inputs" type="text" name="first-name"required><!--tipo de etiqueta-->
+
+                <label for="last-name">Apellidos: </label><!--etiqueta-->   
+                <input class="inputs" type="text" name="last-name"required><!--tipo de etiqueta-->
+                                            <!-- required: nos obliga a completar los textos antes de enviar los datos -->
+
+                <label for="email">Email:</label><!--etiqueta-->
+                <input class="inputs" type="email" name="email"required><!--tipo de etiqueta-->
+
+                <label for="mensaje">Introduce tu mensaje: </label>
+                <textarea class="inputs"required></textarea>
+
+                <input class="inputs boton" type="submit">
+                
+            </form>
+        </div>
+    </main>
+
+    
+    <footer id="footer">
+        <p>Creada por <a href="#"> David Risueño Lablanca</a> &copy; 2023 </p>
+     </footer>
+     
+     <script src="./script.js"></script>   
+     </body>
+    </html>

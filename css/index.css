@@ -1,0 +1,330 @@
+
+/* SECCION HEADER */
+.contenedor-header{
+    width: 100vw;
+    height: 27.9vh;
+    /*FUNCION 1
+    Como lo que quiero hacer es meter el contenido-header dentro
+    del contenedor-header o sea los textos h1 y p dentro de la imagen
+    le tengo que dar al contenedor padre un position: relative y al
+    hijo un position absolute, desbloqueamos funciones de posición
+    y le damos un top: 0 y se monta el texto sobre la imágen*/
+    position: relative;
+    display: inline-block;/*IMPORTANTE SI QUITO ESTA PROPIEDAD
+    SE DESBORDA EL VIDEO Y SE MONTA CON EL CONTENIDO
+    DE LA SIGUIENTE ETIQUETA EN ESTE CASO EL MAIN*/
+
+
+    /* border: 2px solid forestgreen; */
+}
+
+.clip video{
+    width: 100vw;
+    height: 100%;
+
+    
+    /* border: 2px solid blue; */
+} 
+.video{}
+/* video{
+    width: 50%;
+    height: 50%;
+} */
+.contenido-header{
+    /* FUNCION 1
+    Posiciono el h1 y el p dentro de la imágen  */
+    position: absolute;
+    top: 0;
+
+    /*FUNCION 2
+    Propiedades para alinear el h1 y el p dentro del contenedor 
+    contenido-header*/
+    width: 100vw;/*mismo ancho que el viewport, toda la pantalla*/
+    height: 100%;/*30% de alto realtivo al 100vh del contenedor-header(elemento padre) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;   
+
+
+    /* border: 2px solid red; */
+}
+
+
+.contenido-header h1{
+    
+    
+    color: var(--rojo);
+    text-shadow: 2px 2px 2px slategrey;
+    
+}
+@media(min-width:675px) {
+    .contenedor-header h1{
+        font-size: 2.5em;
+        margin-top: 4em;
+    }
+}
+@media(min-width:1100px) {
+    .contenedor-header h1{
+        font-size: 3.5em;
+        margin-top: 6em;
+    }
+
+}
+.contenido-header h2{/*Tablet*/
+    font-size: 1.8em;
+    text-shadow: 2px 2px 2px var(--rojo);
+}
+@media(min-width:675px) {/*Tablet*/
+    .contenido-header h2{
+    margin-top: 3em;
+    margin-bottom: .4em;
+    font-size: 2.2em;
+    
+}
+}
+@media(min-width:1100px) {/*Pc*/
+    .contenedor-header h2{
+    margin-bottom: .4em;    
+    font-size: 3.2em;
+}
+}
+.contenido-header {
+    color:white;
+}
+.contenedor-header p{
+    font-size: .8em;
+    margin-bottom: 1em;
+}
+@media(min-width:675px) {
+    .contenedor-header p{
+        font-size: 1em;
+    }
+}
+@media(min-width:675px) {
+    .contenedor-header p{
+        font-size: 1.3em;
+    }
+
+}
+.contenido-header button{
+    background-color: var(--rojo);
+    color: white;
+    cursor: pointer;
+    transition: all 1s;
+    border: none;
+}
+@media(min-width:675px) {/*Tablet*/
+    .contenido-header button{
+    margin-top: .4em;
+    font-size: .9em;
+}
+}
+@media(min-width:1100px) {/*Pc*/
+    .contenedor-header button{
+    margin-top: .8em;    
+    font-size: 1.2em;
+}
+}
+.contenido-header button:hover{
+    background-color: transparent;
+    color: var(--rojo);
+}
+
+/* MAIN */
+
+.imagen-main img{
+    width: 80vw;
+    height: 40vh;
+    border-radius: 15px;
+    border: 3px solid gainsboro;
+}
+@media(min-width:675px) {/*TABLET*/
+    .imagen-main img{
+        width: 35vw;
+        height: 60vh; 
+    }
+}
+@media(min-width:675px) {
+    .imagen-main{
+        padding-left: 3em;
+        padding-right: 2em;
+    }
+
+}
+.contenedor-main{/*padre*/
+    height: 100vh;
+    width: 100vw;
+    /* background-color: var(--oscuro); */
+    background-image: url(../assets/imgs/fondo-main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;/*centramos todo el contenido que engloba este div padre, imágen, h1 y p*/
+    align-items: center;
+    flex-direction: column;/*posicionamos contenido en columna*/
+    padding-top: 1.5em;
+    text-align: center;/*centramos los textos*/
+
+    /* border: 2px solid purple; */
+}
+@media(min-width:675px) {/*TABLET*/
+    .contenedor-main{/*al pasar de movil a tablet el contenido pasa a posicionarse de forma horizontal*/
+    display: flex;
+    align-items: center;
+    flex-direction: row;/*IMPORTANTE PARA PASAR DE COLUMNA A HORIZONTAL AL HACER RESPONSIVE*/
+    justify-content:space-around;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 4em;
+    }
+}
+.texto-main h1{
+    font-size: 2em;
+    margin-top: .6em;
+    text-shadow: 2px 2px 2px var(--rojo);
+}
+
+@media(min-width:675px) {/*TABLET*/
+    .texto-main h1{
+        font-size: 2.6em;
+    }
+}
+.texto-main p{
+    font-size: 1em;
+    margin-top: .5em;
+}
+@media(min-width:675px) {/*TABLET*/
+    .texto-main p{
+        font-size: 1.5em;
+    }
+}
+.texto-main{
+    color: white;
+}
+.texto-main button{
+    background-color: var(--rojo);
+    color: white;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: all 1s;
+    border: none;
+    
+}
+.texto-main button:hover{
+    background-color: transparent;
+    color: var(--rojo);
+}
+
+/* MAPA */
+
+.contenedor-mapa{
+    width: 100vw;
+    height: 50vh;
+    background-image: url(../assets/imgs/barra.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+
+
+
+    /* border: 2px solid red; */
+}
+@media(min-width:675px) {
+    .contenedor-mapa{
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+}
+.contenedor-mapa h1,h2,h3{
+    margin-top: .5em;
+    
+}
+.contenedor-mapa iframe{
+    height: 30%;
+    width: 80%;
+    margin-top: 1em;
+}
+@media(min-width:675px) {
+    .contenedor-mapa iframe{
+        height: 70%;
+        width: 40%;
+        margin-right: 2.5em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+}
+.texto-mapa h1{
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 2px var(--rojo);
+}
+@media(min-width:675px) {
+    .texto-mapa h1{
+        font-size: 2em;
+    }
+}
+.texto-mapa h2{
+    font-size: 1em;
+    color: var(--rojo);
+    text-shadow: 2px 2px 2px black;
+}
+@media(min-width:675px) {
+    .texto-mapa h2{
+        font-size: 1.6em;
+    }
+}
+.texto-mapa h3{
+    font-size: 1em;
+    color: var(--rojo);
+    text-shadow: 2px 2px 2px black;
+}
+@media(min-width:675px) {
+    .texto-mapa h3{
+        font-size: 1.6em;
+    }
+}
+.texto-mapa a{
+    margin: 2em ;
+    color: wheat;
+}
+.texto-mapa a:hover{
+    color:sienna;
+}
+@media(min-width:675px) {
+    .texto-mapa a{
+        font-size: 1.2em;
+    }
+
+}
+@media(min-width:1100px) {
+    .texto-mapa{
+        margin-left: 2em;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+

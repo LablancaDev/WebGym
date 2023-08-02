@@ -1,0 +1,52 @@
+/* Fuentes */
+@import url(https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Sansita&family=Yatra+One&display=swap);
+
+.contenedor-main{/*elemento padre*/
+    width: 100vw;
+    height: 100vh;
+    background-color:var(--rojo-claro);
+
+    display: flex;
+    align-items: center; /*con las 3 propiedades de flexbox centramos*/
+    justify-content: center;
+
+}
+.contenido-main{/*elemento hijo del contenedor y a la vez hijo del form*/
+    background-color: var(--oscuro);
+    height: 75%;
+    width: 60%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    border: 2px solid var(--rojo);
+}
+.formulario{
+   text-align: center;
+   color: var(--rojo);
+   font-size: 1.3em;
+   text-shadow: 2px 2px 2px black;
+}
+.inputs{/*seleccionamos todos los inputs*/
+    /* display: block;esta propiedad hace que el comportamiento del elemento sea como un bloque, inline que se posicionen en linea */
+    width: 90%;
+    height: 30px;
+    margin: 1.2em;
+}
+.formulario .boton{
+   background-color: var(--rojo);
+   font-size: 1em;
+   width: 6em;
+   cursor: pointer;
+}
+.formulario .boton:hover{
+    background-color: transparent;
+    color: var(--rojo);
+}
+
+
+
+
+

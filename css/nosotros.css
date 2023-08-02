@@ -1,0 +1,88 @@
+/* Fuentes */
+@import url(https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Sansita&family=Yatra+One&display=swap);
+
+.main{
+    width: 100vw;
+    height: 200vh;
+    background-color:var(--rojo-claro);
+    text-align: center;
+}
+@media(min-width:675px) {
+    .main{
+        height: 260vh;
+    }
+}
+@media(min-width:1100px) {
+    .main{
+        height: 300vh;
+    }
+}
+
+
+.imagen{
+    background-image: url(../assets/imgs/fondo-main2.jpg);
+    width: 100vw;
+    height: 55vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.texto1 h1{
+    font-size: 2.4em;/*MOVIL*/
+}
+@media(min-width:675px) {/*TABLET*/
+    .texto1 h1{
+        font-size: 3.2em;
+    }
+}
+@media(min-width:1100px) {/*PC*/
+    .texto1 h1{
+        font-size: 4em;
+    }
+}
+.textos{
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-bottom: 1.7em;
+}
+@media(min-width:675px) {
+    .textos p{
+        font-size: 1.5em;
+    }
+}
+@media(min-width:1100px) {
+    .textos p{
+        font-size: 1.8em;
+    }
+}
+.textos h1,h2{
+    color: white;
+    text-shadow: 3px 3px 3px var(--rojo);
+    padding-top: .7em;
+    margin-bottom: .5em;
+}
+.texto2 h2{
+    font-size: 2em;
+}
+@media(min-width:675px) {
+    .texto2 h2{
+        font-size: 2.5em;
+    }
+}
+@media(min-width:1100px) {
+    .texto2 h2{
+        font-size: 3em;
+    }
+
+}
+.img-nosotros img{
+    height: 25%;
+    width: 40%;
+    
+    
+}
+
+
+
+
+

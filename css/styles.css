@@ -1,0 +1,145 @@
+/* ESTILOS GENERALES */
+*{
+    box-sizing: border-box;
+    margin: 0;/*reseteamos estilos del documento*/
+    padding: 0;
+    text-decoration: none;
+    user-select: none;
+}
+:root{
+    --verde:#88D109;
+    --oscuro:#3F413C;
+    --rojo:#BE0707;
+    --rojo-claro:#D83333;
+    --amarillo:#E8E043;
+    --naranja:#E8A237;
+    --titulos:'Black Ops One', cursive;
+    --titulos2:'Yatra One', cursive;
+    --parrafos:'Sansita', sans-serif;
+}
+html{
+    background-color:black;/*lo pongo para rellenar el pequeño margen entre el video y el main*/
+}
+h1{
+    font-family: var(--titulos);
+    font-size: 2em;
+}
+h2,h3,a{
+    font-family:var(--titulos2);
+}
+p{
+    font-family:var(--parrafos);
+}
+
+
+
+/* SECCION NAV */
+.logo img{
+    height: 3em;
+    width: 3em;
+}
+.contenido-nav{
+    /* background-color: var(--oscuro); */
+    width: 100vw;
+    height: 4em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding-left: 1.3em;
+    padding-right: 1.3em; */
+}
+.logo{
+    padding: .5em;
+}
+/*MENU HAMBURGUESA*/
+
+@media(max-width:675px) { /*MOVIL MENU DESPLEGABLE HASTA 675PX*/
+    .menu{
+        position: absolute;
+        height: 30%;
+        width: 100%;
+        top: 4em;
+        /* left: 0; */
+        background-color: var(--rojo-claro);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 200;
+        transform: translateX(-100%);/*para que los a desaparezcan*/
+    }
+}    
+    .nav_toggle{
+        display: flex; /*!important; */
+        flex-direction: column;
+        margin: 1em;
+        
+    }
+    .nav_toggle span{
+        width: 35px;
+        height: 5px;
+        background-color: wheat;
+        margin-bottom: 5px;
+        border-radius: 2px;
+    }
+
+@media(min-width:675px) {/*elimino las 3 rallas de menu a partir de 675px*/
+    .nav_toggle span{
+        display: none;
+    }    
+
+}
+
+
+.menu.is_active{ /*activa el menu*/
+    transform: translate3d(0px, 0px, 0px);
+  }
+ 
+ 
+
+
+
+/*FIN MENU HAMBURGUESA*/
+
+.menu a{/*MOVIL*/
+    color: var(--rojo);
+    font-size: .8em;
+    transition: all 1s;
+}
+@media(min-width:675px) {
+    .menu a{
+        font-size: 1.2em;
+        margin-right: 1em;
+    }
+}
+@media(min-width:1100px) {
+    .menu a{
+        font-size: 1.7em ;
+    }
+}
+.menu a:hover{
+    color:white;
+}
+
+/* FOOTER */
+#footer{
+    width: 100vw;
+    height: 2.5em;
+    text-align: center;/*centrado horizontal*/
+    color: white;
+    background-color: var(--oscuro);
+
+
+    /* border: 2px solid red; */
+}
+#footer p{
+    line-height: 2em;/*centrado vertical*/
+}
+#footer p a{
+    color: powderblue;
+    text-decoration: underline;
+}
+#footer p a:hover{
+    color: rgb(104, 104, 198);
+}
