@@ -18,7 +18,7 @@
     --parrafos:'Sansita', sans-serif;
 }
 html{
-    background-color:black;/*lo pongo para rellenar el pequeño margen entre el video y el main*/
+    background-color:rgb(190, 190, 190);/*lo pongo para rellenar el pequeño margen entre el video y el main*/
 }
 h1{
     font-family: var(--titulos);
@@ -56,9 +56,9 @@ p{
 
 @media(max-width:675px) { /*MOVIL MENU DESPLEGABLE HASTA 675PX*/
     .menu{
-        position: absolute;
-        height: 30%;
+        height: 40%;
         width: 100%;
+        position: absolute;
         top: 4em;
         /* left: 0; */
         background-color: var(--rojo-claro);
@@ -66,47 +66,49 @@ p{
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        transition: all .5s;
         z-index: 200;
         transform: translateX(-100%);/*para que los a desaparezcan*/
     }
+    .cerrar-menu{
+        position: relative;
+        width: 100vw;/* MUY IMPORTANTE, VITAL DARLE UN WIDTH PARA PODER MOVER EL CONTENEDOR HIJO*/
+    }
+    .cerrar-menu img{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 }    
-    .nav_toggle{
-        display: flex; /*!important; */
-        flex-direction: column;
+
+.menu.visible{ /*activa el menu*/
+    transform: translate3d(0px, 0px, 0px);
+}
+.menu a{/*MOVIL*/
+  color:black;
+  font-size: 1.4em;
+  transition: all 1s;
+  margin: .5em 0;
+}
+.abrir-menu img,.cerrar-menu img{
         margin: 1em;
-        
-    }
-    .nav_toggle span{
-        width: 35px;
-        height: 5px;
-        background-color: wheat;
-        margin-bottom: 5px;
-        border-radius: 2px;
-    }
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+}
+
+
 
 @media(min-width:675px) {/*elimino las 3 rallas de menu a partir de 675px*/
-    .nav_toggle span{
+    .abrir-menu img{
         display: none;
     }    
+    .cerrar-menu img{
+        display: none;
+    }
 
 }
 
-
-.menu.is_active{ /*activa el menu*/
-    transform: translate3d(0px, 0px, 0px);
-  }
- 
- 
-
-
-
-/*FIN MENU HAMBURGUESA*/
-
-.menu a{/*MOVIL*/
-    color: var(--rojo);
-    font-size: .8em;
-    transition: all 1s;
-}
 @media(min-width:675px) {
     .menu a{
         font-size: 1.2em;
@@ -121,6 +123,7 @@ p{
 .menu a:hover{
     color:white;
 }
+/*FIN MENU HAMBURGUESA*/
 
 /* FOOTER */
 #footer{

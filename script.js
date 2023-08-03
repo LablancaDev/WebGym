@@ -1,20 +1,21 @@
-// FORMA 1
+/* MENU HAMBURGUESA*/
+/*Ocultar y mostrar el menú nav*/
 
-/*Instanciamos el boton toggle, al recibir un click hará lo siguiente*/
-//  _toggle.onclick = () =>{
-//      _items.classList.toggle("open")
-//  }
+let navegador = document.querySelector("#menu");
 
-// FORMA 2
-var menu = document.querySelector('.nav_toggle');
+let abrir = document.querySelector("#abrir");
 
-function toggleMenu (event) {
-    this.classList.toggle('is-active');
-    document.querySelector( ".menu" ).classList.toggle("is_active");
-    event.preventDefault();
-  }
+let cerrar = document.querySelector("#cerrar");
 
-  menu.addEventListener('click', toggleMenu, false);
+/*Creamos evento para que al darle click al botón abrir, se muestra la nav-bar*/
+abrir.addEventListener("click", () =>{
+  menu.classList.add("visible")//añadimos la clase visible a la clase nav
+  console.log(abrir);
+});
 
 
+/*Creamos evento para que al darle click al botón cerrar, se cierre la nav-bar*/
+cerrar.addEventListener("click", () =>{
+  menu.classList.remove("visible");//le quitamos la clase visible a nav
+});
   

@@ -1,8 +1,8 @@
 
 /* SECCION HEADER */
 .contenedor-header{
-    width: 100vw;
-    height: 27.9vh;
+    width: 100vw;   /* QUITAR ESTOS DOS */
+    height: 27.9vh;     
     /*FUNCION 1
     Como lo que quiero hacer es meter el contenido-header dentro
     del contenedor-header o sea los textos h1 y p dentro de la imagen
@@ -13,7 +13,7 @@
     display: inline-block;/*IMPORTANTE SI QUITO ESTA PROPIEDAD
     SE DESBORDA EL VIDEO Y SE MONTA CON EL CONTENIDO
     DE LA SIGUIENTE ETIQUETA EN ESTE CASO EL MAIN*/
-
+    
 
     /* border: 2px solid forestgreen; */
 }
