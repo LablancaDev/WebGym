@@ -20,7 +20,7 @@
     --parrafos:'Sansita', sans-serif;
 }
 html{
-    background-color:rgb(190, 190, 190);/*lo pongo para rellenar el pequeño margen entre el video y el main*/
+   
 }
 h1{
     font-family: var(--titulos2);
@@ -44,12 +44,18 @@ p{
     /* background-color: var(--oscuro); */
     width: 100vw;
     height: 4em;
-
+    background-color: #FFFF;
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* padding-left: 1.3em;
     padding-right: 1.3em; */
+
+    position: sticky;/*le damos al header un posicionamiento fijo arriba del todo y un z-index para que este por encima de cualquier elemento excepto el menu desplegable*/
+    top: 0;
+    z-index: 100;
+
+
 }
 .logo{
     padding: .5em;
@@ -58,7 +64,6 @@ p{
 
 @media(max-width:675px) { /*MOVIL MENU DESPLEGABLE HASTA 675PX*/
     .menu{
-        height: 40%;
         width: 100%;
         position: absolute;
         top: 4em;
@@ -86,6 +91,7 @@ p{
 .menu.visible{ /*activa el menu*/
     transform: translate3d(0px, 0px, 0px);
 }
+
 .menu a{/*MOVIL*/
   color:var(--azul2);
   font-size: 1.4em;

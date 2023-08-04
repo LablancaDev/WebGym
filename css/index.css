@@ -10,6 +10,7 @@
     hijo un position absolute, desbloqueamos funciones de posición
     y le damos un top: 0 y se monta el texto sobre la imágen*/
     position: relative;
+  
     /*IMPORTANTE SI QUITO ESTA PROPIEDAD
     SE DESBORDA EL VIDEO Y SE MONTA CON EL CONTENIDO
     DE LA SIGUIENTE ETIQUETA EN ESTE CASO EL MAIN*/
@@ -66,14 +67,14 @@
 }
 
 .efectTitle{
-    animation: mostrarArriba 1s;
+    animation: mostrarIzq 1s;
 }
-@keyframes mostrarArriba{
+@keyframes mostrarIzq{
     0%{
-        transform: translateY(-400px);
+        transform: translateX(400px);
     }
     100%{
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
@@ -85,14 +86,14 @@
     transition: all 1s;
 }
 .efectText{
-    animation: mostrarAbajo 1s;
+    animation: mostrarDrch 1s;
 }
-@keyframes mostrarAbajo{
+@keyframes mostrarDrch{
     0%{
-        transform: translateY(400px);
+        transform: translateX(-400px);
     }
     100%{
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
@@ -165,7 +166,24 @@
     height: 40vh;
     border-radius: 15px;
     border: 3px solid gainsboro;
+
+      /* Evento scroll */
+      opacity: 0;
+      transition: all .7s;
 }
+
+.mostrarAbajo{
+    animation: mostrarAbajo .7s;
+}
+@keyframes mostrarAbajo{
+    0%{
+        transform: translateY(400px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 @media(min-width:675px) {/*TABLET*/
     .imagen-main img{
         width: 35vw;
@@ -193,9 +211,8 @@
     flex-direction: column;/*posicionamos contenido en columna*/
     padding-top: 1.5em;
     text-align: center;/*centramos los textos*/
-
-    /* border: 2px solid purple; */
 }
+
 @media(min-width:675px) {/*TABLET*/
     .contenedor-main{/*al pasar de movil a tablet el contenido pasa a posicionarse de forma horizontal*/
     display: flex;
@@ -229,6 +246,9 @@
 }
 .texto-main{
     color: white;
+    /*Evento scroll*/
+    opacity: 0;
+    transition: all 1 s;
 }
 .texto-main button{
     background-color: var(--rojo);
