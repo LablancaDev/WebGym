@@ -7,6 +7,8 @@
     user-select: none;
 }
 :root{
+    --azul:#00D2E3;
+    --azul2:#0078E3;
     --verde:#88D109;
     --oscuro:#3F413C;
     --rojo:#BE0707;
@@ -21,11 +23,11 @@ html{
     background-color:rgb(190, 190, 190);/*lo pongo para rellenar el pequeño margen entre el video y el main*/
 }
 h1{
-    font-family: var(--titulos);
+    font-family: var(--titulos2);
     font-size: 2em;
 }
 h2,h3,a{
-    font-family:var(--titulos2);
+    font-family:var(--titulos);
 }
 p{
     font-family:var(--parrafos);
@@ -61,7 +63,7 @@ p{
         position: absolute;
         top: 4em;
         /* left: 0; */
-        background-color: var(--rojo-claro);
+        background-color: var(--azul);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -85,7 +87,7 @@ p{
     transform: translate3d(0px, 0px, 0px);
 }
 .menu a{/*MOVIL*/
-  color:black;
+  color:var(--azul2);
   font-size: 1.4em;
   transition: all 1s;
   margin: .5em 0;
@@ -121,7 +123,7 @@ p{
     }
 }
 .menu a:hover{
-    color:white;
+    color:var(--azul);
 }
 /*FIN MENU HAMBURGUESA*/
 

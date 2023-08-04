@@ -1,8 +1,8 @@
 
 /* SECCION HEADER */
 .contenedor-header{
-    width: 100vw;   /* QUITAR ESTOS DOS */
-    height: 27.9vh;     
+    /* width: 100vw;   
+    height: 27.9vh;      */
     /*FUNCION 1
     Como lo que quiero hacer es meter el contenido-header dentro
     del contenedor-header o sea los textos h1 y p dentro de la imagen
@@ -10,7 +10,7 @@
     hijo un position absolute, desbloqueamos funciones de posición
     y le damos un top: 0 y se monta el texto sobre la imágen*/
     position: relative;
-    display: inline-block;/*IMPORTANTE SI QUITO ESTA PROPIEDAD
+    /*IMPORTANTE SI QUITO ESTA PROPIEDAD
     SE DESBORDA EL VIDEO Y SE MONTA CON EL CONTENIDO
     DE LA SIGUIENTE ETIQUETA EN ESTE CASO EL MAIN*/
     
@@ -35,6 +35,9 @@
     Posiciono el h1 y el p dentro de la imágen  */
     position: absolute;
     top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     /*FUNCION 2
     Propiedades para alinear el h1 y el p dentro del contenedor 
@@ -52,84 +55,107 @@
 }
 
 
-.contenido-header h1{
-    
-    
-    color: var(--rojo);
-    text-shadow: 2px 2px 2px slategrey;
-    
+.contenido-header h1{ 
+    color: var(--azul);
+    text-shadow: 2px 2px 2px var(--azul2);
+    font-size: 2em;
+
+    /*FUNCIÓN TITULO VIENE DESDE ARRIBA*/
+    opacity: 0;
+    transition: all 1s;
 }
+
+.efectTitle{
+    animation: mostrarArriba 1s;
+}
+@keyframes mostrarArriba{
+    0%{
+        transform: translateY(-400px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.contenido-header h2{/*Tablet*/
+    font-size: 1.8em;
+    text-shadow: 2px 2px 2px var(--azul2);
+
+    opacity: 0;
+    transition: all 1s;
+}
+.efectText{
+    animation: mostrarAbajo 1s;
+}
+@keyframes mostrarAbajo{
+    0%{
+        transform: translateY(400px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 @media(min-width:675px) {
     .contenedor-header h1{
-        font-size: 2.5em;
-        margin-top: 4em;
+    
     }
 }
 @media(min-width:1100px) {
     .contenedor-header h1{
-        font-size: 3.5em;
-        margin-top: 6em;
+      
     }
 
 }
-.contenido-header h2{/*Tablet*/
-    font-size: 1.8em;
-    text-shadow: 2px 2px 2px var(--rojo);
-}
 @media(min-width:675px) {/*Tablet*/
     .contenido-header h2{
-    margin-top: 3em;
-    margin-bottom: .4em;
-    font-size: 2.2em;
+  
     
 }
 }
 @media(min-width:1100px) {/*Pc*/
     .contenedor-header h2{
-    margin-bottom: .4em;    
-    font-size: 3.2em;
+   
 }
 }
 .contenido-header {
     color:white;
 }
 .contenedor-header p{
-    font-size: .8em;
-    margin-bottom: 1em;
+   
 }
 @media(min-width:675px) {
     .contenedor-header p{
-        font-size: 1em;
+       
     }
 }
 @media(min-width:675px) {
     .contenedor-header p{
-        font-size: 1.3em;
+   
     }
 
 }
 .contenido-header button{
-    background-color: var(--rojo);
-    color: white;
+    background-color: var(--azul2);
+    color: var(--azul);
     cursor: pointer;
     transition: all 1s;
     border: none;
 }
 @media(min-width:675px) {/*Tablet*/
     .contenido-header button{
-    margin-top: .4em;
-    font-size: .9em;
+ 
 }
 }
 @media(min-width:1100px) {/*Pc*/
     .contenedor-header button{
-    margin-top: .8em;    
-    font-size: 1.2em;
+  
+
 }
 }
 .contenido-header button:hover{
     background-color: transparent;
-    color: var(--rojo);
+    color: var(--azul);
 }
 
 /* MAIN */
@@ -222,7 +248,6 @@
 
 .contenedor-mapa{
     width: 100vw;
-    height: 50vh;
     background-image: url(../assets/imgs/barra.jpg);
     background-size: cover;
     background-attachment:fixed;

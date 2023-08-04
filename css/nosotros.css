@@ -3,20 +3,11 @@
 
 .main{
     width: 100vw;
-    height: 200vh;
+   
     background-color:var(--rojo-claro);
     text-align: center;
 }
-@media(min-width:675px) {
-    .main{
-        height: 260vh;
-    }
-}
-@media(min-width:1100px) {
-    .main{
-        height: 300vh;
-    }
-}
+
 
 
 .imagen{

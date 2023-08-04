@@ -18,4 +18,25 @@ abrir.addEventListener("click", () =>{
 cerrar.addEventListener("click", () =>{
   menu.classList.remove("visible");//le quitamos la clase visible a nav
 });
+
+
+/*EVENTO TEXTOS HEADER*/
+
+window.onload = cargaFunciones;
+
+function cargaFunciones(){
+  titleUp();
+  textoUp();
+}
+
+function titleUp(){
+  let title = document.querySelector(".contenido-header h1");
+  title.style.opacity = 1;
+  title.classList.add("efectTitle");
+}
+function textoUp(){
+  let textBottom = document.querySelector(".contenido-header h2");
+  textBottom.style.opacity = 1;
+  textBottom.classList.add("efectText");
+}
   
