@@ -13,9 +13,7 @@
 }
 .contenido-main{/*elemento hijo del contenedor y a la vez hijo del form*/
     background-color: var(--oscuro);
-    height: 75%;
     width: 60%;
-
     display: flex;
     align-items: center;
     justify-content: center;
