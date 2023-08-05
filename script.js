@@ -73,3 +73,63 @@ function mainScroll(){
 
 }
 window.addEventListener("scroll", mainScroll); 
+
+
+//EFECTO BOTÓN CAMBIO DE IMÁGENES Prueba 1
+
+let img = document.querySelector(".imagen-main img");
+
+let change = document.querySelector(".imagen-main button");
+
+change.addEventListener("click", ()=>{
+  // do{
+  if(img.src.match("./assets/imgs/gym.jpg")){
+    img.src = "./assets/imgs/lucha.jpg";
+  }else if(img.src = "./assets/imgs/lucha.jpg"){
+    img.src = "./assets/imgs/natacion.jpg";
+  }else if(img.src = "./assets/imgs/natacion.jpg"){
+    img.src = "./assets/imgs/pesa.png";
+  }else if(img.src = "./assets/imgs/pesa.png"){
+    img.src = "./assets/imgs/gym2.jpg";
+  }else{
+    img.src = "./assets/imgs/gym3.jpg";
+  }
+  // }while (img===(img.src="./assets/imgs/gym.jpg"))
+});
+
+//EFECTO BOTÓN CAMBIO DE IMÁGENES Prueba 2
+
+
+// let img = document.querySelector(".imagen-main img");
+
+// let change = document.querySelector(".imagen-main button");
+
+// let imgArray = new Array;
+
+// imgArray[0] = new Image();
+// imgArray[0].src = './assets/imgs/gym.jpg';
+
+// imgArray[1] = new Image();
+// imgArray[1].src = './assets/imgs/lucha.jpg';
+
+// imgArray[2] = new Image();
+// imgArray[2].src = './assets/imgs/natacion.jpg';
+
+// imgArray[3] = new Image();
+// imgArray[3].src = './assets/imgs/pesa.png';
+
+// change.addEventListener("click", ()=>{
+//     for(let i = 0; i<imgArray.length; i++){
+//       if(img.src.match(imgArray[0])){
+//         img.src = imgArray[1];
+//           }else if(img.src = img.src.match(imgArray[1])){
+//              img.src = imgArray[2];
+//           }else if(img.src = "./assets/imgs/natacion.jpg"){
+//             img.src = "./assets/imgs/pesa.png";
+//           }else if(img.src = "./assets/imgs/pesa.png"){
+//             img.src = "./assets/imgs/gym2.jpg";
+//           }else{
+//             img.src = "./assets/imgs/gym3.jpg";
+//           }
+//     }
+// });

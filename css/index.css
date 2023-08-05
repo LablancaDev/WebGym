@@ -169,7 +169,34 @@
 
       /* Evento scroll */
       opacity: 0;
-      transition: all .7s;
+      transition: all 1s;
+}
+/*CENTRADO PERFECTO DE UN BOTÓN EN UN DIV*/
+.imagen-main{/*PADRE*/
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagen-main button{/*HIJO*/
+    position: absolute;
+    bottom: 1.5em;
+   
+
+    text-transform:uppercase;
+    padding: .7em 1em;
+    background-color: var(--azul2);
+    color:  #FFFF;
+    cursor: pointer;
+    border: none;
+    border: 1px solid #FFFF;
+    border-radius: 8px;
+    transition: all .4s;
+}
+.imagen-main button:hover{
+    background-color: transparent;
+    color: var(--azul2);
 }
 
 .mostrarAbajo{
@@ -212,6 +239,7 @@
     padding-top: 1.5em;
     text-align: center;/*centramos los textos*/
 }
+
 
 @media(min-width:675px) {/*TABLET*/
     .contenedor-main{/*al pasar de movil a tablet el contenido pasa a posicionarse de forma horizontal*/
