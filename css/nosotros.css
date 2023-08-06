@@ -7,9 +7,6 @@
     background-color:var(--azul2);
     text-align: center;
 }
-
-
-
 .imagen{
     background-image: url(../assets/imgs/fondo-main2.jpg);
     width: 100vw;

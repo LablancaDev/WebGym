@@ -8,7 +8,7 @@
     display: flex;
     align-items: center; /*con las 3 propiedades de flexbox centramos*/
     justify-content: center;
-    padding: 1.5em 0;
+    padding: 3em 0;
 }
 .contenido-main{/*elemento hijo del contenedor y a la vez hijo del form*/
     background-color: var(--oscuro);

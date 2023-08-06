@@ -68,7 +68,7 @@ p{
         position: absolute;
         top: 4em;
         /* left: 0; */
-        background-color: var(--azul);
+        background-color: #dadada;
         display: flex;
         flex-direction: column;
         align-items: center;

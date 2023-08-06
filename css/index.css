@@ -170,9 +170,11 @@
     height: 40vh;
     border-radius: 15px;
     border: 3px solid var(--azul2);
-      /* Evento scroll */
-      opacity: 0;
-      transition: all 1s;
+}
+.imagen-main{
+    /* Evento scroll */
+    opacity: 0;
+    transition: all 1s;
 }
 /*CENTRADO PERFECTO DE UN BOTÓN EN UN DIV*/
 .imagen-main{/*PADRE*/

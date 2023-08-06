@@ -42,9 +42,9 @@ function textoUp(){
 
 
 //ANIMACIÓN SCROLL DESDE ABAJO IMÁGEN Y TEXTO
-let BottomPhoto = document.querySelectorAll(".imagen-main img, button");
+let BottomPhoto = document.querySelectorAll("#imagen-main");
 
-let BottomText = document.querySelectorAll(".texto-main");
+let BottomText = document.querySelectorAll("#texto-main");
 
 function mainScroll(){
   let photoScroll = document.documentElement.scrollTop;
@@ -52,9 +52,9 @@ function mainScroll(){
   for(let i = 0; i < BottomPhoto.length; i++){
     let longBottomPhoto = BottomPhoto[i].offsetTop;
 
-    if(longBottomPhoto -100 < photoScroll){
+    if(longBottomPhoto -60 < photoScroll){
       BottomPhoto[i].style.opacity = 1;
-      BottomPhoto[i].classList.add("efectText");
+      BottomPhoto[i].classList.add("mostrarAbajo");
     }
   }
 
@@ -63,7 +63,7 @@ function mainScroll(){
   for(let i = 0; i < BottomText.length; i++){
     let longBottomText = BottomText[i].offsetTop;
 
-    if(longBottomText -100 < textScroll){
+    if(longBottomText -60 < textScroll){
       BottomText[i].style.opacity = 1;
       BottomText[i].classList.add("mostrarAbajo");
     }
