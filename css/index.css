@@ -140,12 +140,16 @@
     background-color: var(--azul2);
     color: var(--azul);
     cursor: pointer;
-    transition: all 1s;
+    transition: all .6s;
     border: none;
+    border-radius: 5px;
+    border: 1px solid var(--azul);
+    padding: .2em;
+    margin-top: 2em;
 }
 @media(min-width:675px) {/*Tablet*/
     .contenido-header button{
- 
+        
 }
 }
 @media(min-width:1100px) {/*Pc*/
@@ -156,7 +160,7 @@
 }
 .contenido-header button:hover{
     background-color: transparent;
-    color: var(--azul);
+    color: var(--azul2);
 }
 
 /* MAIN */
@@ -165,8 +169,7 @@
     width: 80vw;
     height: 40vh;
     border-radius: 15px;
-    border: 3px solid gainsboro;
-
+    border: 3px solid var(--azul2);
       /* Evento scroll */
       opacity: 0;
       transition: all 1s;
@@ -190,9 +193,9 @@
     color:  #FFFF;
     cursor: pointer;
     border: none;
-    border: 1px solid #FFFF;
+    border: 1px solid var(--azul);
     border-radius: 8px;
-    transition: all .4s;
+    transition: all .6s;
 }
 .imagen-main button:hover{
     background-color: transparent;
@@ -255,7 +258,7 @@
 .texto-main h1{
     font-size: 2em;
     margin-top: .6em;
-    text-shadow: 2px 2px 2px var(--rojo);
+    text-shadow: 2px 2px 2px var(--azul2);
 }
 
 @media(min-width:675px) {/*TABLET*/
@@ -279,17 +282,20 @@
     transition: all 1 s;
 }
 .texto-main button{
-    background-color: var(--rojo);
+    background-color: var(--azul2);
     color: white;
     cursor: pointer;
     margin-top: 1em;
     transition: all 1s;
     border: none;
-    
+    border: 1px solid var(--azul);
+    border-radius: 5px;
+    padding: .2em;
+    transition: all .6s;
 }
 .texto-main button:hover{
     background-color: transparent;
-    color: var(--rojo);
+    color: var(--azul2);
 }
 
 /* MAPA */

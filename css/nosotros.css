@@ -4,7 +4,7 @@
 .main{
     width: 100vw;
    
-    background-color:var(--rojo-claro);
+    background-color:var(--azul2);
     text-align: center;
 }
 
@@ -13,7 +13,7 @@
 .imagen{
     background-image: url(../assets/imgs/fondo-main2.jpg);
     width: 100vw;
-    height: 55vh;
+    height: 75vh;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -48,7 +48,7 @@
 }
 .textos h1,h2{
     color: white;
-    text-shadow: 3px 3px 3px var(--rojo);
+    text-shadow: 3px 3px 3px var(--azul);
     padding-top: .7em;
     margin-bottom: .5em;
 }
@@ -69,7 +69,7 @@
 .img-nosotros img{
     height: 25%;
     width: 40%;
-    
+    margin-bottom: 2em;
     
 }
 

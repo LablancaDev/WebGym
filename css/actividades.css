@@ -7,45 +7,45 @@ propiedad margin: auto para que se ajuste el div hijo al tamaño
 del contenedor padre automáticamente, ver en curso css mas formas... */
 
 .contenedor-main{
-    background-color: var(--rojo-claro);
+    background-color: var(--azul2);
     width: 100vw;
-   
+    padding: 1em;
 
-    display: flex;
+    /* display: flex; */
 }
 
 .contenido-main{
     background-color: var(--oscuro);
-    width: 95vw;
-    height: 95vh;
+    /* width: 95vw;
+    height: 95vh; */
     border-radius: 10px;
-    border: 2px solid var(--rojo);
+    border: 2px solid var(--azul);
    
     
-    margin: auto;
+    /* margin: auto; */
 }
 @media(min-width:675px) {
     .contenido-main{
-        height: 95%;
+        /* height: 95%; */
     }
 }
 .texto h1,h2{
     font-size: 1.5em;
     padding-top: .5em;
     padding-bottom: .5em;
-    color: var(--rojo);
+    color: var(--azul2);
     text-shadow: 2px 2px 2px black;
 }
 .texto{
     text-align: center;
-    color: wheat;
+    color: #fae6ab;
     font-size: .8em;
     margin-left: 1em;
     margin-right: 1em;
 }
 .texto h1{
     color: white;
-    text-shadow: 2px 2px 2px var(--rojo); 
+    text-shadow: 2px 2px 2px var(--azul2); 
 }
 @media(min-width:675px) {
     .texto h1{
@@ -60,9 +60,10 @@ del contenedor padre automáticamente, ver en curso css mas formas... */
 .imagenes{/*centramos el padre que contiene las imágenes*/
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
     margin-top: 2em;
     text-align: center;
+    /* flex-wrap: wrap; */
   
    
     
@@ -72,7 +73,9 @@ del contenedor padre automáticamente, ver en curso css mas formas... */
 }
 @media(min-width:675px) {
     .imagenes{
-       margin-top: 5em; 
+       margin-top: 2em; 
+       
+       flex-direction: row;
     }
 
 }
@@ -81,7 +84,7 @@ del contenedor padre automáticamente, ver en curso css mas formas... */
     width: 70%;/*MUY IMPORTANTE USAR % PARA EL TAMAÑO DE LAS IMAGENES Y QUE NO DESBORDE EL CONTENIDO, CON em aunque sea medida relativa desborda*/
     border-radius: 12px;
     margin: .5em;
-
+    border: 1.5px solid var(--azul2);
 
     
 }

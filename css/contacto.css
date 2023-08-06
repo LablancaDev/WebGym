@@ -3,13 +3,12 @@
 
 .contenedor-main{/*elemento padre*/
     width: 100vw;
-    height: 100vh;
-    background-color:var(--rojo-claro);
+    background-color:var(--azul2);
 
     display: flex;
     align-items: center; /*con las 3 propiedades de flexbox centramos*/
     justify-content: center;
-
+    padding: 1.5em 0;
 }
 .contenido-main{/*elemento hijo del contenedor y a la vez hijo del form*/
     background-color: var(--oscuro);
@@ -17,15 +16,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+  
     border-radius: 10px;
-    border: 2px solid var(--rojo);
+    border: 2px solid var(--azul);
 }
 .formulario{
    text-align: center;
-   color: var(--rojo);
+   color: var(--azul2);
    font-size: 1.3em;
    text-shadow: 2px 2px 2px black;
+   padding: 1em 0;
 }
 .inputs{/*seleccionamos todos los inputs*/
     /* display: block;esta propiedad hace que el comportamiento del elemento sea como un bloque, inline que se posicionen en linea */
@@ -34,14 +34,19 @@
     margin: 1.2em;
 }
 .formulario .boton{
-   background-color: var(--rojo);
+   background-color: var(--azul2);
    font-size: 1em;
    width: 6em;
    cursor: pointer;
+   border: none;
+   border-radius: 5px;
+   border: 1px solid var(--azul);
+   color: #FFFF;
+    transition: all .6s;
 }
 .formulario .boton:hover{
     background-color: transparent;
-    color: var(--rojo);
+    color: var(--azul2);
 }
 
 

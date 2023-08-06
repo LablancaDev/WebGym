@@ -42,7 +42,7 @@ function textoUp(){
 
 
 //ANIMACIÓN SCROLL DESDE ABAJO IMÁGEN Y TEXTO
-let BottomPhoto = document.querySelectorAll(".imagen-main img");
+let BottomPhoto = document.querySelectorAll(".imagen-main img, button");
 
 let BottomText = document.querySelectorAll(".texto-main");
 
@@ -54,7 +54,7 @@ function mainScroll(){
 
     if(longBottomPhoto -100 < photoScroll){
       BottomPhoto[i].style.opacity = 1;
-      BottomPhoto[i].classList.add("mostrarAbajo");
+      BottomPhoto[i].classList.add("efectText");
     }
   }
 
@@ -84,15 +84,17 @@ let change = document.querySelector(".imagen-main button");
 change.addEventListener("click", ()=>{
   // do{
   if(img.src.match("./assets/imgs/gym.jpg")){
-    img.src = "./assets/imgs/lucha.jpg";
-  }else if(img.src = "./assets/imgs/lucha.jpg"){
-    img.src = "./assets/imgs/natacion.jpg";
-  }else if(img.src = "./assets/imgs/natacion.jpg"){
-    img.src = "./assets/imgs/pesa.png";
-  }else if(img.src = "./assets/imgs/pesa.png"){
+    img.src = "./assets/imgs/actividadesDirigidas.jpg";
+  }else if(img.src.match ("./assets/imgs/actividadesDirigidas.jpg")){
     img.src = "./assets/imgs/gym2.jpg";
-  }else{
-    img.src = "./assets/imgs/gym3.jpg";
+  }else if(img.src.match ("./assets/imgs/gym2.jpg")){
+    img.src = "./assets/imgs/crossfit.jpg";
+  }else if(img.src.match  ("./assets/imgs/crossfit.jpg")){
+    img.src = "./assets/imgs/natacion.jpg";
+  }else if(img.src.match  ("./assets/imgs/natacion.jpg")){
+    img.src = "./assets/imgs/spa.jpg";
+  }else if(img.src.match  ("./assets/imgs/spa.jpg")){
+    img.src = "./assets/imgs/gym.jpg";
   }
   // }while (img===(img.src="./assets/imgs/gym.jpg"))
 });
@@ -133,3 +135,31 @@ change.addEventListener("click", ()=>{
 //           }
 //     }
 // });
+// (function(){
+//   var i = 0;
+//   document.all["imgV"].srcList = []
+//   document.all["imgV"].srcList[0] = "/assets/imgs/gym.jpg'"
+//   document.all["imgV"].srcList[1] = "/assets/imgs/lucha.jpg"
+//   document.all["imgV"].srcList[2] = "/assets/imgs/natacion.jpg"
+//   document.all["imgV"].srcList[3] = "img3.png"
+//   document.all["imgV"].srcList[4] = "img4.png"
+
+//   anterior = function(imgElement){
+//       if(i !== 0){
+//           i--
+//       }else{
+//           alert("esta es la primera foto")
+//           return;
+//       }
+//       imgElement.src = imgElement.srcList[i]
+//   }
+//   siguiente = function(imgElement){
+//       i++
+//       if(!imgElement.srcList[i]){
+//           i--
+//           alert("esta es la ultima foto")
+//           return;
+//       }
+//       imgElement.src = imgElement.srcList[i]
+//   }
+// })()
