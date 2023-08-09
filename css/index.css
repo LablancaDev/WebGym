@@ -19,18 +19,21 @@
     /* border: 2px solid forestgreen; */
 }
 
-.clip video{
+/* .clip video{
     width: 100vw;
     height: 100%;
+}  */
+.img-header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/imgs/training-828726_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.img-header img{
 
-    
-    /* border: 2px solid blue; */
-} 
-.video{}
-/* video{
-    width: 50%;
-    height: 50%;
-} */
+}
 .contenido-header{
     /* FUNCION 1
     Posiciono el h1 y el p dentro de la imágen  */
